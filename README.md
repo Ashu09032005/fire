@@ -124,3 +124,8 @@ git clone https://github.com/your-username/fire-prediction.git
 cd fire-prediction
 pip install -r requirements.txt
 python app.py
+```
+<img width="1903" height="983" alt="image" src="https://github.com/user-attachments/assets/2273143f-b0ab-42b0-85ec-2ac23ae27259" />
+
+<img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/d1a8f5e7-0aef-453f-91ea-aa1cd91b80de" />
+
