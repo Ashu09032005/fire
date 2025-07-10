@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #c0392b;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            background: #fff0f0;
+            border: 1px solid #f5cccc;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        iframe {
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔥 Prediction: {{ "Fire" if prediction == 1 else "No Fire" }}</h1>
+
+    {% if spread %}
+        <h2>Predicted Fire Spread (in km)</h2>
+        <ul>
+            {% for key, value in spread.items() %}
+                <li>{{ key }}: {{ value | round(2) }}</li>
+            {% endfor %}
+        </ul>
+
+        {% if map_url %}
+            <h2>Fire Spread Map</h2>
+            <iframe src="{{ map_url }}" width="100%" height="500"></iframe>
+        {% endif %}
+    {% endif %}
+
+    <a href="/">← Back to Form</a>
+</body>
+</html>

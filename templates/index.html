@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #c0392b;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            width: 100%;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fire Prediction Model:</h1>
+    <form method="post">
+        <label>Rainfall (mm):</label>
+        <input type="number" name="rainfall" step="any" required>
+
+        <label>T-MAX (°C):</label>
+        <input type="number" name="tmax" step="any" required>
+
+        <label>T-MIN (°C):</label>
+        <input type="number" name="tmin" step="any" required>
+
+        <label>Cloud Cover:</label>
+        <input type="number" name="cloud" step="any" required>
+
+        <label>Rh Max (%):</label>
+        <input type="number" name="rhmax" step="any" required>
+
+        <label>Rh Min (%):</label>
+        <input type="number" name="rhmin" step="any" required>
+
+        <label>Wind speed (kmph):</label>
+        <input type="number" name="wind_speed" step="any" required>
+
+        <label>Wind Direction (deg):</label>
+        <input type="number" name="wind_dir" step="any" required>
+
+        <label>Latitude:</label>
+        <input type="number" name="latitude" step="any" required>
+
+        <label>Longitude:</label>
+        <input type="number" name="longitude" step="any" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
