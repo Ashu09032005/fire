@@ -9,3 +9,4 @@ openpyxl
 xgboost
 flask
 joblib
+folium
