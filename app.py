@@ -3,6 +3,7 @@ import pandas as pd
 from models import load_models, predict_fire_and_spread
 ##request grabs user inputs from forms.
 app = Flask(__name__)
+import os
 
 # Load models and preprocessor
 best_model, scaler, spread_models, X_columns = load_models()
@@ -33,5 +34,9 @@ def index():
 
     return render_template("index.html")
 
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
+
