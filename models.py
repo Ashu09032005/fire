@@ -17,7 +17,8 @@ import os
 # 1. Load & preprocess data
 # =============================
 def load_and_prepare_data(file_path):
-    df = pd.read_excel(file_path)
+    df = pd.read_excel(file_path, engine='openpyxl')
+
     df['Fire/No Fire'] = df['Fire/No Fire'].apply(lambda x: 1 if x == 'Fire' else 0)
     return df
 
