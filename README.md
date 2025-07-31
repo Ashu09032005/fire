@@ -1,6 +1,7 @@
 # 🔥 Kalahandi Forest Fire Prediction and Spread Estimation
 
 This project uses meteorological and geographical data sourced from the [Orissa University of Agriculture and Technology (OUAT)](https://ouat.ac.in/) to predict the likelihood of a forest fire in the Kalahandi region and estimate the spread of fire over time if one occurs.
+Deployment link:https://kalahandi-fire-predictor.onrender.com
 
 ---
 
